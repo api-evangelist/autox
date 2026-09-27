@@ -1,23 +1,66 @@
 aid: autox
+
 name: AutoX
-description: 'AutoX is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: AutoX is an autonomous driving technology company based in San Jose, California. It develops AI‑enabled self‑driving platforms for
+  robo‑taxis and grocery delivery, aiming to democratize autonomy. Founded in 2016, AutoX has raised significant funding and operates Level‑4
+  driverless services in China, with a focus on safety through advanced sensors, solid‑state LiDAR, radar, and AI perception.
+
 url: https://raw.githubusercontent.com/api-evangelist/autox/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Autonomous Driving
+- AI
+- Robotics
+- Transportation
+- San Jose
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/autox-hosts.yml
+- type: Vendors
+  url: vendors/autox-vendors.yml
+- type: DomainSecurity
+  url: security/autox-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.autox.ai
+
+apis:
+- name: AutoX API
+  description: AutoX provides autonomous driving platform APIs.
+  humanURL: https://www.autox.ai
+  aid: autox:autox-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The homepage returns a 404 shell and no machine‑readable API documentation is available.
+  evidence:
+  - url: https://www.autox.ai
+    status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
