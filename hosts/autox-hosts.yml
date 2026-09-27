@@ -26,10 +26,13 @@ hosts:
   - probed
   - contract-discovery
   - well-known
+  - vendor-detect
   types:
   - Website
   serves:
   - docs
+  - cdn
+  vendor: cloudfront
   registrable_domain: autox.ai
   role: website
   relation: own
